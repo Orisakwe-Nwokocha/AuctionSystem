@@ -8,7 +8,6 @@ import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -17,9 +16,9 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 import static java.time.LocalDateTime.now;
 
 @Entity
+@Table(name = "bids")
 @Getter
 @Setter
-@ToString
 public class Bid {
     @Id
     @GeneratedValue(strategy = IDENTITY)
@@ -45,6 +44,5 @@ public class Bid {
         bidTime = now();
 
     }
-
-
+    
 }

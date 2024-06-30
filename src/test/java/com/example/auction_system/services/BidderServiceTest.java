@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static com.example.auction_system.data.constants.Role.BIDDER;
+import static com.example.auction_system.utils.TestUtils.buildRegisterRequest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
@@ -27,11 +27,4 @@ class BidderServiceTest {
         assertThat(role).isEqualTo("BIDDER");
     }
 
-    private static RegisterRequest buildRegisterRequest() {
-        RegisterRequest request = new RegisterRequest();
-        request.setUsername("Bidder");
-        request.setPassword("password");
-        request.setRole(BIDDER);
-        return request;
-    }
 }
