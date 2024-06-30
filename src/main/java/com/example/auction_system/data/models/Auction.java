@@ -53,7 +53,6 @@ public class Auction {
     @PrePersist
     private void setDateCreated(){
         dateCreated = now();
-
     }
 
     @PreUpdate

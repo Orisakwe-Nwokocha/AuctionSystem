@@ -1,0 +1,1 @@
+TRUNCATE TABLE bio_data CASCADE;

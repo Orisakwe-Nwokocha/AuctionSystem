@@ -30,7 +30,6 @@ public class Bid {
     @ManyToOne
     private Auction auction;
 
-
     @Column(precision = 10, scale = 2, nullable = false)
     private BigDecimal amount;
 
@@ -42,7 +41,6 @@ public class Bid {
     @PrePersist
     private void setBidTime(){
         bidTime = now();
-
     }
     
 }
